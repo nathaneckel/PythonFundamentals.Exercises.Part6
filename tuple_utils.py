@@ -1,9 +1,25 @@
 from typing import Iterable, Tuple, List, Union
+
+import tuple_utils
+
 TicTacToeRow = List[str]
 TicTacToeBoard = Tuple[TicTacToeRow, TicTacToeRow, TicTacToeRow]
 
 
-def tic_tac_toe_finish(board: TicTacToeBoard, pos_y: int, pos_x: int, symbol: str) -> None:
+#def tic_tac_toe_finish(board: TicTacToeBoard, pos_y: int, pos_x: int, symbol: str) -> None:
+    def test_tic_tac_toe_finish(self):
+        board_in = (
+            ['O', 'X', ''],
+            ['X', 'X', ''],
+            ['', '', '']
+        )
+        board_out = (
+            ['O', 'X', ''],
+            ['X', 'X', 'X'],
+            ['', '', '']
+        )
+        tuple_utils.tic_tac_toe_finish(board_in, 1, 2, 'X')
+        self.assertEqual(board_in, board_out)
     """
     This function takes in a TicTacToeBoard and applies the finishing move based on the provided parameters pos_y,
     pos_x, and symbol.
@@ -28,7 +44,10 @@ def count_instances(collection: Tuple, instance: Union[int, str]) -> int:
     pass  # remove pass statement and implement me
 
 
-def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
+# def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
+#     indexes = (9, 10, 11)
+#     entries = ('Z', 'Y', 'X')
+#     tuple_utils.print_indexes_and_entries(indexes, entries)
     """
     This function iterates through the given parameters and prints the items formatted according to the following rules:
     The index of the indexes iterable correspond to the index of the entries iterable.
@@ -38,17 +57,34 @@ def print_indexes_and_entries(indexes: Iterable, entries: Iterable) -> None:
     :param entries: A list or tuple
     :return: None
     """
-    pass  # remove pass statement and implement me
+    #pass  # remove pass statement and implement me
+
+    def print_indexes_and_entries(indexes, entries):
+        indexes = (1, 2, 3)
+        entries = ('A', 'B', 'C')
+        tuple_utils.print_indexes_and_entries(indexes, entries)
+
+        # expected = "Index: 1          Entry: A\n" \
+        #            "Index: 2          Entry: B\n" \
+        #            "Index: 3          Entry: C\n"
+        # self.assertEqual(expected, mock_stdout.getvalue())
+        #
+        #
 
 
-def print_items_with_index(items: Iterable):
+
+def print_items_with_index(self: Iterable):
+    items = ('love', 'joy', 'peace', 'patience', 'kindness', 'gentleness', 'faithfulness', 'self-control')
+    tuple_utils.print_items_with_index(items)
     """
-    This function iterates through the items parameter and prints the item formatted according to the following rules:
-    Each item printed received the index 1-N where N is the size of the items parameter.
+    This function iterates through the items parameter 
+    and prints the item formatted according to the following rules:
+    Each item printed received the index 1-N where N 
+    is the size of the items parameter.
     Indexes start at 1.
     Each index and item are separated by a colon and a space.
     :param items: A tuple or a list
     :return: None
     """
-    pass  # remove pass statement and implement me
+      # remove pass statement and implement me
 
