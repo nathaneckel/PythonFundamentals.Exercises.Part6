@@ -74,7 +74,7 @@ def count_instances(collection: Tuple, instance: Union[int, str]) -> int:
 
 
 def print_items_with_index(self: Iterable):
-    items = ('love', 'joy', 'peace', 'patience', 'kindness', 'gentleness', 'faithfulness', 'self-control')
+    items = ('love\n', 'joy\n', 'peace\n', 'patience\n', 'kindness\n', 'gentleness\n', 'faithfulness\n', 'self-control\n')
     tuple_utils.print_items_with_index(items)
     """
     This function iterates through the items parameter 
@@ -86,5 +86,4 @@ def print_items_with_index(self: Iterable):
     :param items: A tuple or a list
     :return: None
     """
-      # remove pass statement and implement me
 
