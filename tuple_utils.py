@@ -7,20 +7,20 @@ TicTacToeBoard = Tuple[TicTacToeRow, TicTacToeRow, TicTacToeRow]
 
 
 #def tic_tac_toe_finish(board: TicTacToeBoard, pos_y: int, pos_x: int, symbol: str) -> None:
-    def test_tic_tac_toe_finish(self):
-        board_in = (
-            ['O', 'X', ''],
-            ['X', 'X', ''],
-            ['', '', '']
-        )
-        board_out = (
-            ['O', 'X', ''],
-            ['X', 'X', 'X'],
-            ['', '', '']
-        )
-        tuple_utils.tic_tac_toe_finish(board_in, 1, 2, 'X')
-        self.assertEqual(board_in, board_out)
-    """
+def test_tic_tac_toe_finish(self):
+    board_in = (
+        ['O', 'X', ''],
+        ['X', 'X', ''],
+        ['', '', '']
+    )
+    board_out = (
+        ['O', 'X', ''],
+        ['X', 'X', 'X'],
+        ['', '', '']
+    )
+    tuple_utils.tic_tac_toe_finish(board_in, 1, 2, 'X')
+    self.assertEqual(board_in, board_out)
+"""
     This function takes in a TicTacToeBoard and applies the finishing move based on the provided parameters pos_y,
     pos_x, and symbol.
 
@@ -30,7 +30,7 @@ TicTacToeBoard = Tuple[TicTacToeRow, TicTacToeRow, TicTacToeRow]
     :param symbol: The symbol that should be placed in the column (X, or O)
     :return: None
     """
-    pass  # remove pass statement and implement me
+pass  # remove pass statement and implement me
 
 
 def count_instances(collection: Tuple, instance: Union[int, str]) -> int:
