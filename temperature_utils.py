@@ -28,13 +28,19 @@ Given a float representing a temperature in Celsius, return the corresponding va
 
 
 def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) -> Tuple[Tuple[float, float]]:
-    if input_unit_of_measurement == "c":
-        f = (temperatures * 9 / 5) + 32
-        return (float(temperatures), f),
 
-    elif input_unit_of_measurement == "f":
-        c = (temperatures - 32) * 5 / 9
-        return temperatures, c
+    tupleOftuples = ()
+
+    for temp in temperatures:
+        if input_unit_of_measurement == "c":
+            f = (temp * 9 / 5) + 32
+            tupleOftuples += (float(temp), round(f, 2)),
+
+        elif input_unit_of_measurement == "f":
+            c = (temp - 32) * 5 / 9
+            tupleOftuples += (float(temp), round(c, 2)),
+
+    return tupleOftuples
 
 
 """
